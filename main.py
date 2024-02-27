@@ -25,4 +25,7 @@ values=[lemmatizer.lemmatize(word) for word in words]
 grammar = "NP: {<DT>?<JJ>*<NN>}"
 chunk_parser=nltk.RegexpParser(grammar)
 tree = chunk_parser.parse(value)
-tree.draw()
+#tree.draw()-visual representation
+grammars = """
+Chunk: {<.*>+}
+}<JJ>{"""
